@@ -1,0 +1,146 @@
+{
+	"products": [{
+		"fairy_sparklers": {
+			"id": 0,
+			"type": 0,
+			"name": "Sky King 1000 Roll",
+			"description": "Roll of 1000 bad-ass firecrackers"
+		}
+    },
+    {
+		"black_cat": {
+			"id": 1,
+			"type": 0,
+			"name": "Black Cat Half Brick",
+			"description": "Used in the movie Home Aone"
+		}
+    },
+    {
+		"bunker_bombs": {
+			"id": 2,
+			"type": 0,
+			"name": "Bunker Bombs",
+			"description": "The most exciting way to lose a finger or two"
+		}
+    },
+    {
+		"color_smoke": {
+			"id": 3,
+			"type": 1,
+			"name": "Color Smoke Balls",
+			"description": "Pretty self explainitory."
+		}
+    },
+    {
+		"jumbo_smoke": {
+			"id": 4,
+			"type": 1,
+			"name": "Jumbo Smoke Balls",
+			"description": "Big balls that smoke."
+		}
+    },
+    {
+		"desert_smoke": {
+			"id": 5,
+			"type": 1,
+			"name": "Desert Smoke",
+			"description": "In case you need to desigate an LZ in the desert"
+		}
+    },
+    {
+		"moon_rocket": {
+			"id": 6,
+			"type": 2,
+			"name": "To The Moon",
+			"description": "Literally goes to the moon."
+		}
+    },
+    {
+		"tomahawk": {
+			"id": 7,
+			"type": 2,
+			"name": "Tomahawk Missile (8 inch)",
+			"description": "A really small war starter"
+		}
+    },
+    {
+		"saturn_300": {
+			"id": 8,
+			"type": 2,
+			"name": "Saturn Missile 300",
+			"description": "300 Saturn Missiles."
+		}
+    },
+    {
+		"fairy_sparklers": {
+			"id": 9,
+			"type": 3,
+			"name": "TBD id9",
+			"description": "TBD Type 3 ID 9"
+		}
+    },
+    {
+		"fairy_sparklers": {
+			"id": 10,
+			"type": 3,
+			"name": "TBD id10",
+			"description": "TBD Type 3 ID 10"
+		}
+    },
+    {
+		"fairy_sparklers": {
+			"id": 11,
+			"type": 3,
+			"name": "TBD id11",
+			"description": "TBD Type 3 ID 11"
+		}
+    },
+    {
+		"fairy_sparklers": {
+			"id": 12,
+			"type": 4,
+			"name": "TBD id12",
+			"description": "TBD Type 4 ID 12"
+		}
+    },
+    {
+		"fairy_sparklers": {
+			"id": 13,
+			"type": 4,
+			"name": "TBD id13",
+			"description": "TBD Type 4 ID 13"
+		}
+    },
+    {
+		"fairy_sparklers": {
+			"id": 14,
+			"type": 4,
+			"name": "TBD id14",
+			"description": "TBD Type 4 ID 14"
+		}
+    },
+    {
+		"fairy_sparklers": {
+			"id": 15,
+			"type": 5,
+			"name": "RPG-29 Vampir",
+			"description": "A Russian rocked-propelled grenade launcher that can penetrate the frontal hulls of Western composite-armored main battle tanks."
+		}
+    },
+    {
+		"fairy_sparklers": {
+			"id": 16,
+			"type": 5,
+			"name": "BGM-71 TOW",
+			"description": "TOW ('Tube-launched, Optically tracked, Wire-guided') is an American anti-tank missile. It can be found in a wide variety of manually carried and vehicle mounted forms, as well as widespread use on helicopters."
+		}
+    },
+    {
+		"fairy_sparklers": {
+			"id": 17,
+			"type": 5,
+			"name": "AGM-114 Hellfire",
+			"description": "An air-to-surface missile first developed for anti-armor use, but later models were developed for precision strikes against other target types."
+		}
+    }]
+}
