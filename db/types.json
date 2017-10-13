@@ -1,0 +1,38 @@
+{
+	"types": [{
+		"id": 0,
+		"category": 0,
+		"name": "firecrackers",
+		"description": "Fireworks intended to explode and make loud noises"
+    },
+    {
+		"id": 1,
+		"category": 0,
+		"name": "smoke bombs",
+		"description": "Most smoke bombs don’t explode, they just, well, smoke"
+    },
+    {
+		"id": 2,
+		"category": 0,
+		"name": "rockets",
+		"description": "Fireworks that whistle while blasting off into the sky and explode when they reach their peak"
+    },
+    {
+		"id": 3,
+		"category": 1,
+		"name": "linear shaped charge",
+		"description": "The detonation projects into the lining, to form a continuous, knife-like jet. The jet cuts any material in its path, to a depth depending on the size and materials used in the charge"
+    },
+    {
+		"id": 4,
+		"category": 1,
+		"name": "explosively formed penetrator",
+		"description": "An EFP uses the action of the explosive's detonation wave to project and deform a plate or dish of ductile metal into a compact high-velocity projectile, commonly called the slug. This slug is projected toward the target at about two kilometers per second."
+    },
+    {
+		"id": 5,
+		"category": 1,
+		"name": "tandem warhead",
+		"description": "A charge, consisting of two separate shaped charges, one in front of the other, typically with some distance between them."
+    }]
+}
