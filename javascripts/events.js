@@ -5,8 +5,18 @@ const dom = require("./dom");
 const dropdownMenu = $("#category-dropdown-menu");
 
 $('body').on('click', '.category-option', (e) => {
-    console.log(e.target.id);
-    dom.populateSelectedProducts(e.target.id); 
+    $('#dropdownMenu1').html(`${e.target.innerText}  <span class="caret"></span>`); 
+    dom.populateProducts(e.target.id); 
 });
+
+
+$('body').on('click', '.modal-btn', (e) => {
+    let productId = findSelectedProductId(e.target.id); 
+    dom.populateModal(productId);
+});
+
+const findSelectedProductId = (id) => {
+    return id.split("-")[2];
+};
 
 module.exports = {};

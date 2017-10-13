@@ -65,6 +65,7 @@ const combineExplosivies = (categories, types, products) => {
             if (category.id === type.category) {
                 products.forEach((product) => {
                    if (type.id === product.type) {
+                       product.categoryId = category.id; 
                        product.categoryName = category.name;
                        product.typeName = type.name;
                        product.typeDescription = type.description; 

@@ -66,6 +66,7 @@ const combineExplosivies = (categories, types, products) => {
             if (category.id === type.category) {
                 products.forEach((product) => {
                    if (type.id === product.type) {
+                       product.categoryId = category.id; 
                        product.categoryName = category.name;
                        product.typeName = type.name;
                        product.typeDescription = type.description; 
@@ -89,6 +90,9 @@ let categories = [];
 let products = []; 
 const dropdownMenu = $("#category-dropdown-menu");
 const productsContainer = $("#products-container");
+const modalBody = $(".modal-body");
+const modalTitle = $("#myModalLabel");
+
 
 const setCategories = (_categories) => {
     categories = _categories;
@@ -115,15 +119,53 @@ const populateDropdownOptions = (categories) => {
     });
 };
 
-const populateSelectedProducts = (selectedCategoryId) => {
-    let domString = "";
-    products.forEach((product) => {
+const populateProducts = (selectedCategoryId) => {
+    let productString = "";
+    let columns = 4; //must be even
+    let index = 0; 
+    products.forEach((product) =>{
         if (selectedCategoryId == product.categoryId) {
-            productsContainer.append(product.name);
+            if (index % columns === 0) {
+                productString += `<div class="row">`;               
+            }
+            productString += 
+                `<div class="product-card col-md-${12/columns - 1}">
+                    <div class="description-container">
+                        <h3> ${product.name} </h3>
+
+                    </div>
+                    <button id="modal-btn-${product.id}" type="button" class="modal-btn btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">
+                    View Details
+                </button>
+                </div>`;
+            if ((index + 1) % columns === 0) {
+                productString += `</div>`;           
+            }
+            index++; 
         }
+        
     });
+    productsContainer.html(productString); 
 };
 
+
+const populateModal = (productIdstring) => {
+    let productBody = '';
+    let productHeader = ''; 
+    products.forEach((product) => {
+        if (product.id == productIdstring) {
+            productHeader = product.name;
+            productBody += 
+            `<p>${product.description}</p>
+            <p>Category: ${product.categoryName}</p>
+            <p>Type: ${product.typeName}</p>
+            <p>Type Description: ${product.typeDescription}</p>
+            `;
+        }
+    });
+    modalBody.html(productBody);
+    modalTitle.html(productHeader); 
+};
 
 module.exports = {
     setCategories,
@@ -131,7 +173,8 @@ module.exports = {
     setProducts,
     getProducts,
     populateDropdownOptions,
-    populateSelectedProducts
+    populateProducts,
+    populateModal
 };
 },{}],3:[function(require,module,exports){
 "use strict";
@@ -141,9 +184,19 @@ const dom = require("./dom");
 const dropdownMenu = $("#category-dropdown-menu");
 
 $('body').on('click', '.category-option', (e) => {
-    console.log(e.target.id);
-    dom.populateSelectedProducts(e.target.id); 
+    $('#dropdownMenu1').html(`${e.target.innerText}  <span class="caret"></span>`); 
+    dom.populateProducts(e.target.id); 
 });
+
+
+$('body').on('click', '.modal-btn', (e) => {
+    let productId = findSelectedProductId(e.target.id); 
+    dom.populateModal(productId);
+});
+
+const findSelectedProductId = (id) => {
+    return id.split("-")[2];
+};
 
 module.exports = {};
 },{"./dom":2}],4:[function(require,module,exports){

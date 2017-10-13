@@ -10,18 +10,36 @@
 </head>
 <body>
     <div id="main">
-        <div id="dropdown-container">
+        <div id="dropdown-container" class="container">
                 <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                          Explosive Categories
+                          Select a category
                           <span class="caret"></span>
                         </button>
                         <ul id="category-dropdown-menu" class="dropdown-menu" aria-labelledby="dropdownMenu1">
                         </ul>
                       </div>
         </div>
-        <div id="products-container"></div>
+        <div id="products-container" class="container"></div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <script type="text/javascript" src=".\lib\node_modules\jquery\dist\jquery.js"></script> 
     <script type="text/javascript" src=".\lib\node_modules\bootstrap\dist\js\bootstrap.js"></script> 
